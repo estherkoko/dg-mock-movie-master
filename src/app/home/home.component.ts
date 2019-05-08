@@ -15,14 +15,11 @@ export class HomeComponent implements OnInit {
  Title: string;
  selectedYear: string;
  imdb: string;
- imagePath:string;
  url = 'https://www.omdbapi.com/?apikey=c51d871e';
-  result: string;
 
   constructor(private http: HttpClient) {
     this.allMoviesData = [];
     this.selectedYear = '20';
-    this.imagePath = "../../assets/images/tt037284.jpg";
     this.filteredMoviesArray = [];
    }
 
