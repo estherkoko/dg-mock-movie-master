@@ -1,0 +1,31 @@
+<div class="container mx-auto w-50 mt-5 bg-light">
+    <div class="text-right pb-2">
+        <div class="btn-group border" role="group" aria-label="Basic example">
+            <button type="button" (click)="filterMovies('20')" class="btn btn-light" [ngClass]="{'active': (selectedYear === '20')}">2000's</button>
+            <button type="button" (click)="filterMovies('19')" class="btn btn-light" [ngClass]="{'active': (selectedYear === '19')}">1900's</button>
+          </div>
+    </div>
+  <div *ngFor="let movie of filteredMoviesArray" class="border border-secondary border-3 rounded mb-3 p-3 row">
+    <div class="col-md-3 rounded">
+      <img src="../../assets/images/{{movie.imdbID}}.jpg" height="170px" class="rounded"/>
+    </div>
+    <div class="col-md-9">
+      <h3 class="font-weight-bold border-bottom">{{movie.Title}}</h3>
+      <div class="row pb-2"> 
+          <div class="col-md-2 text-muted text-center">
+              <div class="border border-light shadow-sm rounded">{{movie.Rated}}</div>
+          </div>
+          <div class="col-md-2">
+              <div>{{movie.Runtime}}</div>
+          </div>
+          <div class="col-md-8 text-right">
+              <div>{{movie.Released}}</div>
+          </div>
+        </div>
+      <div>{{movie.Plot}}</div>
+      <div class="text-right pt-2">
+          <button (click)="getMovieDetails()" type="button" class="btn btn-warning text-white w-25">View on IMDB</button>
+      </div>
+    </div>
+  </div>
+</div>

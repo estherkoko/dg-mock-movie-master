@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+$font-family-sans-serif:  "Poppins", Helvetica, Arial, sans-serif !default;
+$font-size-base: 0.75rem !default;
+
+
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+.border-3 {
+    border-width:3px !important;
+}
+
+.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active, .show > .btn-light.dropdown-toggle {
+    color: #fff;
+    background-color: $primary;
+}
