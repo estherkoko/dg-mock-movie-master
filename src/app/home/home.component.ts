@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
  Title: string;
  selectedYear: string;
  imdb: string;
- url = 'https://www.omdbapi.com/?apikey=c51d871e';
+ url = 'https://www.omdbapi.com/?apikey='';
 
   constructor(private http: HttpClient) {
     this.allMoviesData = [];
